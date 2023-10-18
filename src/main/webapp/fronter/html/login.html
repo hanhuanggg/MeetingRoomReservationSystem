@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教室管理系统---请登录</title>
+    <!-- 引入页签图标 -->
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/login.css">
+    <!-- 引入js -->
+    <script type="text/javascript" src="../js/login.js"></script>
+
+</head>
+<body>
+    <div class="login">
+        <div class="login-notice">请输入账号密码与登录身份：</div>
+        <!-- 表单 -->
+        <div class="login-form">
+            <!-- 文本输入框 -->
+            账户：<input type="text" name="account" value="21009200558" maxlength="11" id="account">
+            <br>
+            密码：<input type="password" name="pwd" value="123456" maxlength="6" id="password">
+            <br>
+             <!-- 多选框 -->
+            身份：
+            <input type="radio" name="identity" value="user" id="user-radio" checked><span class="login-user">用户</span>
+            <input type="radio" name="identity" value="manager" id="manager-radio">管理员
+            <br>
+            <!-- 确认按钮 -->
+            <input type="submit" value="确认" id="login-submit">
+            <!-- 重置按钮 -->
+            <input type="reset" value="清空" id="login-clear">
+        </div>
+    </div>
+</body>
+</html>

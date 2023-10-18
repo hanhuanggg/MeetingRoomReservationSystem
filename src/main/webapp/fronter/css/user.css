@@ -1,0 +1,115 @@
+/* #region基础设置start */
+.container{
+    width: 1190px;
+    /* height: 30px; */
+    margin: 0 auto;
+    color: #666666;
+}
+/* #endregion基础设置end */
+
+/* #region顶部导航条start */
+.topbar{
+    height: 90px;
+    padding-top: 33px;
+    background-color: #ECECEC;
+    border-bottom: #DD302D 2px solid;
+}
+.welcome{
+    height: 30px;
+    line-height: 30px;
+    font-size: 0px;
+    color: #666666;
+}
+.welcome span,.welcome a{
+    font-size: 24px;
+}
+.welcome .hello{
+    margin-right: 28px;
+}
+.welcome .username{
+    padding-right: 10px;
+    border-right: 1px solid #666666;
+}
+.welcome .userexit{
+    padding-left: 10px;
+}
+.topbar-nav .list li{
+    float: left;
+    font-size: 24px;
+}
+.topbar-nav .list{
+    height: 30px;
+    line-height: 30px;
+}
+.topbar-nav .list li a{
+    padding: 0 15px;
+    border-right: 1px solid black;
+}
+.topbar-nav .list li:first-child a{
+    padding-left: 0;
+}
+.topbar-nav .list li:last-child a{
+    padding-right: 0;
+    border: 0;
+}
+/* #endregion顶部导航条end */
+
+/* #region主要内容区侧边start */
+.main-content{
+    margin-top: 10px;
+}
+
+.main-content .slide-filtrate{
+    width: 350px;
+    height: 500px;
+    background-color: #f4f4f4;
+    /* 为二级菜单开启相对定位 */
+    /* position: relative; */
+}
+
+.main-content .slide-filtrate li{
+    font-size: 14px;
+    line-height: 100px;
+    padding-left: 16px;
+    border-bottom: 1px solid black;
+}
+
+.main-content .slide-filtrate li div{
+    height: 100px;
+    color: #666666;
+}
+
+.main-content .slide-filtrate .slide-time:hover,.slide-date:hover{
+    cursor: pointer;
+}
+
+.main-content .slide-filtrate .slide-time,.slide-date,.silde-enrollment-content,.silde-theme-content{
+    color: #DD302D;
+}
+
+.main-content .slide-submit{
+    width: 40px;
+    height: 40px;
+    margin-left: 135px;
+    margin-top: 10px;
+    color: #666666;
+}
+
+.main-content .slide-submit:hover{
+    cursor: pointer;
+    color: #DD302D;
+}
+/* #endregion主要内容区侧边end */
+
+/* #region主要内容区右边start */
+.main-content .right-rooms{
+    width: 830px;
+    height: 500px;
+    margin-left: 10px;
+    background-color: #ECECEC;
+}
+
+
+
+
+/* #endregion主要内容区右边end */

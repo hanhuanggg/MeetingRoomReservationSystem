@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教室管理系统---用户</title>
+    <!-- 引入页签图标 -->
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/user.css">
+     <!-- 引入js -->
+     <script type="text/javascript" src="../js/user.js"></script>
+</head>
+<body>
+    <!-- 顶部导航条 -->
+    <div class="topbar">
+        <!-- 版心 -->
+        <div class="container clearfix">
+            <!-- 左侧欢迎区 -->
+            <div class="welcome leftfix">
+                <span class="hello">会议室预约/管理系统欢迎您</span>
+                <span>用户：</span>
+                <a href="#" class="username" id="name">用户名</a>
+                <a href="#" class="userexit">退出登录</a>
+            </div>
+            <!-- 右侧导航区 -->
+            <div class="topbar-nav rightfix">
+                <ul class="list clearfix">
+                    <li><a href="#">我的预约</a></li>
+                    <li><a href="#">会议室查看与预约</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 主要内容区 -->
+    <div class="main-content">
+        <div class="container clearfix">
+            <!-- 左 -->
+            <ul class="slide-filtrate leftfix">
+                <li>
+                    <div class="slide-starttime">
+                        请选择开始时间：
+                        <input type="date" class="slide-date">
+                        <input type="time" class="slide-time">
+                    </div>
+                    
+                    <div class="slide-endtime">
+                        请选择结束时间：
+                        <input type="date" class="slide-date">
+                        <input type="time" class="slide-time">
+                    </div> 
+                </li>
+
+                <li>
+                    <div class="enrollment">
+                        请输入参与人数:
+                        <input type="text" class="silde-enrollment-content">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="theme">
+                        请选择主题:
+                        <select name="theme" class="silde-theme-content"><!--有value拿value，没有value拿option的文字-->
+                            <option value="stockholder">股东大会</option>
+                            <option value="client">客户咨询</option>
+                            <option value="company">公司年会</option>
+                            <option value="business" selected>商务会议</option>
+                            <option value="other">其他主题</option>
+                        </select>
+                    </div>
+                </li>
+
+                <input type="submit" value="确认" class="slide-submit">
+            </ul>
+            <!-- 右 -->
+            <div class="right-rooms leftfix">
+                <div>可用会议室：</div>
+                <div class="room-pictures">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.login{
+    border: 2px solid black;
+    background-color: #f4f4f4;
+    height: 500px;
+    width: 600px;
+    text-align: center;
+    font-size: 60px;
+    color: #666666;
+    margin-top: 80px;
+    margin-left: 350px;
+}
+
+.login-notice{
+    border-bottom: 2px solid #DD302D;
+}
+
+#user-radio,#manager-radio{
+    height: 30px;
+    width: 30px;
+}
+
+#user-radio,#manager-radio:hover{
+    cursor: pointer;
+}
+
+.login-user{
+    padding-right: 10px;
+    border-right: solid 2px black;
+}
+
+.login-form{
+    font-size: 40px;
+}
+
+input{
+    height: 40px;
+    font-size: 30px;
+}
+
+#login-submit,#login-clear{
+    margin-top: 50px;
+}
+
+#login-submit:hover,#login-clear:hover{
+    cursor: pointer;
+    color: #DD302D;
+}
+
+#login-submit{
+    margin-right: 60px;
+}
