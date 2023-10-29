@@ -37,15 +37,15 @@ input{
     font-size: 30px;
 }
 
-#login-submit,#login-clear{
+#login-submit,#login-clear,#login-register{
     margin-top: 50px;
 }
 
-#login-submit:hover,#login-clear:hover{
+#login-submit:hover,#login-clear:hover,#login-register:hover{
     cursor: pointer;
     color: #DD302D;
 }
 
-#login-submit{
+#login-submit,#login-clear{
     margin-right: 60px;
 }

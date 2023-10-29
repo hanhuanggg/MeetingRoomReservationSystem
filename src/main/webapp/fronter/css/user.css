@@ -1,7 +1,7 @@
 /* #region基础设置start */
 .container{
     width: 1190px;
-    /* height: 30px; */
+    height: 500px;
     margin: 0 auto;
     color: #666666;
 }
@@ -62,9 +62,7 @@
 .main-content .slide-filtrate{
     width: 350px;
     height: 500px;
-    background-color: #f4f4f4;
-    /* 为二级菜单开启相对定位 */
-    /* position: relative; */
+    background-color:#ECECEC;
 }
 
 .main-content .slide-filtrate li{
@@ -107,9 +105,141 @@
     height: 500px;
     margin-left: 10px;
     background-color: #ECECEC;
+    /* 为二级菜单开启相对定位 */
+    position: relative;
+}
+
+#room-notice{
+    height: 39px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: black solid 1px;
 }
 
 
+.room-pictures{
+    height: 450px;
+    overflow-y: scroll;
+}
 
+.rooms{
+    margin: 10px 35px;
+    height: 200px;
+    width: 200px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.room-pictures>span:nth-child(-n+3){
+    margin-top: 20px;
+}
+
+.room-button{
+    color:#666666;
+}
+
+
+.room-button:hover{
+    color: #DD302D;
+    cursor: pointer;
+}
 
 /* #endregion主要内容区右边end */
+
+/* #region会议室详情start */
+
+.room-specific{
+    position: absolute;
+    width: 830px;
+    height: 500px;
+    top: 0;
+    background-color:#ECECEC;
+    display: none;
+}
+
+#room-script{
+    font-size: 24px;
+    height: 199px;
+    border-bottom: solid black 1px;
+}
+
+#room-script li{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.room-label{
+    height: 50px;
+    /* border-bottom: solid black 1px; */
+}
+
+.specific-picture{
+    margin: 10px 23px;
+}
+
+#specific-picture1{
+    margin-left: 46px;
+}
+
+.select-button{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.select-button input{
+    width: 40px;
+    height: 40px;
+    color: #666666;
+}
+
+.select-button input:hover{
+    color: #DD302D;
+    cursor: pointer;
+}
+
+#select-button-submit{
+    margin-right: 60px;
+}
+/* #endregion会议室详情end */
+
+/* #region预约start */
+.appointment{
+    position: absolute;
+    width: 830px;
+    height: 500px;
+    top: 0;
+    font-size: 12px;
+    color: #666666;
+    background-color:#ECECEC;
+    display: none;
+    overflow: auto;
+}
+
+.appointment table{
+    border: 0;
+    width: 812px;
+    height: 500px;
+    text-align: center;
+}
+
+.appointment table tr{
+    height: 50px;
+    table-layout: fixed;
+}
+
+
+.appointment input{
+    color: #666666;
+}
+
+.appointment input:hover{
+    color: #DD302D;
+    cursor: pointer;
+}
+
+
+/* #endregion预约end */
+
