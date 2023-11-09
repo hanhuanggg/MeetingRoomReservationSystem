@@ -4,6 +4,16 @@ public class User {
    private int userId;
    private String username;
    private String password;
+   private String authority;
+
+    public String getAuthority() {
+        return authority;
+    }
+
+    public void setAuthority(String authority) {
+        this.authority = authority;
+    }
+
 
     public int getUserId() {
         return userId;

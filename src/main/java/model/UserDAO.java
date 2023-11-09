@@ -22,6 +22,7 @@ public class UserDAO {
                user.setUserId(resultSet.getInt("userId"));
                user.setUsername(resultSet.getString("username"));
                user.setPassword(resultSet.getString("password"));
+               user.setAuthority(resultSet.getString("authority"));
                return user;
             }
 

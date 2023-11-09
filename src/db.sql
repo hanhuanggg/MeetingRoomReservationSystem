@@ -4,14 +4,10 @@ use MeetingRoomReservationSystem;
 create table user(
 userId int primary key auto_increment,
 userName varchar(20) unique,
-password varchar(20)
+password varchar(20),
+authority varchar(20)
 )Engine=InnoDB default charset=utf8;
 
-create table administrator(
-adminId int primary key auto_increment,
-adminName varchar(20) unique,
-password varchar(20)
-)Engine=InnoDB default charset=utf8;
 
 create table meetingRoom(
 meetingNumber varchar(5) primary key,

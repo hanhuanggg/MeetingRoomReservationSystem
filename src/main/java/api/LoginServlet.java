@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.BufferedReader;
 import java.io.IOException;
 
 @WebServlet("/login")
@@ -18,13 +19,28 @@ public class LoginServlet extends HttpServlet {
     ObjectMapper objectMapper=new ObjectMapper();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+//        StringBuilder sb = new StringBuilder();
+//        BufferedReader reader = req.getReader();
+//        String line;
+//        while ((line = reader.readLine()) != null) {
+//            sb.append(line);
+//        }
+//        String requestBody = sb.toString();
+//        System.out.println(requestBody);
+//
         req.setCharacterEncoding("utf8");
         resp.setCharacterEncoding("utf8");
         String username=req.getParameter("username");
         String password=req.getParameter("password");
+        String authority=req.getParameter("authority");
+        System.out.println("{username:"+username);
+        System.out.println("password:"+password);
+        System.out.println("authority:"+authority+"}");
+
 
         if(username==null||"".equals(username)||password==null||"".equals(password)){
-            String html="<h3>Login failed,please input password</h3>";
+            String html="<h3>登录失败,账户名和密码不能为空</h3>";
             resp.getWriter().write(html);
             return;
         }
@@ -33,12 +49,12 @@ public class LoginServlet extends HttpServlet {
         UserDAO userDAO=new UserDAO();
         User user= userDAO.selectByUserName(username);
         if(user==null){
-            String html="<h3>Login failed,userId or password wrong</h3>";
+            String html="<h3>登录失败,用户名或者密码错误</h3>";
             resp.getWriter().write(html);
             return;
         }
         if(!password.equals(user.getPassword())){
-            String html="<h3>Login failed,userId or password wrong</h3>";
+            String html="<h3>登录失败,用户名或者密码错误</h3>";
             resp.getWriter().write(html);
             return ;
         }
