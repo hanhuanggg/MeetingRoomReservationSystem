@@ -1,14 +1,17 @@
 package model;
 
-import java.sql.Timestamp;
-
 public class Reservation_req {
     private int r_id;
-    private String userName;
-    private String states;
-    private int capacity;
-    private int area;
-    private String function;
+    private String username;
+    private String room_number;
+    private String subject;
+
+    private String reqTime;
+
+    private String manager_name;
+
+    private String approvalTime;
+    private String reason;
 
     public int getR_id() {
         return r_id;
@@ -18,53 +21,59 @@ public class Reservation_req {
         this.r_id = r_id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getStates() {
-        return states;
+    public String getRoom_number() {
+        return room_number;
     }
 
-    public void setStates(String states) {
-        this.states = states;
+    public void setRoom_number(String room_number) {
+        this.room_number = room_number;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
-    public int getArea() {
-        return area;
-    }
-
-    public void setArea(int area) {
-        this.area = area;
-    }
-
-    public String getFunction() {
-        return function;
-    }
-
-    public void setFunction(String function) {
-        this.function = function;
-    }
-
-    public Timestamp getReqTime() {
+    public String getReqTime() {
         return reqTime;
     }
 
-    public void setReqTime(Timestamp reqTime) {
+    public void setReqTime(String reqTime) {
         this.reqTime = reqTime;
     }
 
-    private Timestamp reqTime;
+    public String getManager_name() {
+        return manager_name;
+    }
+
+    public void setManager_name(String manager_name) {
+        this.manager_name = manager_name;
+    }
+
+    public String getApprovalTime() {
+        return approvalTime;
+    }
+
+    public void setApprovalTime(String approvalTime) {
+        this.approvalTime = approvalTime;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
 }

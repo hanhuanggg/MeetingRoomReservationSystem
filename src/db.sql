@@ -36,3 +36,5 @@ foreign key(r_id) references reservation_req(r_id)
 )Engine=InnoDB default charset=utf8;
 
 insert into user values(114514,'zhangsan',123456);
+
+create 'student','Sname','Ssex','Sage','Sdept','course'

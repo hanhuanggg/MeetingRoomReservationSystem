@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教室管理系统---请注册</title>
+    <!-- 引入页签图标 -->
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../css/register.css">
+    <!-- 引入js -->
+    <!-- <script type="text/javascript" src="../js/register.js"></script> -->
+
+</head>
+<body>
+    <div class="register">
+        <div class="register-notice">请输入账号密码与登录身份：</div>
+        <!-- 表单 -->
+
+         <form action="http://127.0.0.1:8080/MeetingRoomReservationSystem/register" method="post">
+            <!-- 文本输入框 -->
+            账户：<input type="text" name="username" id="username">
+            <br>
+            密码：<input type="password" name="password" id="password">
+            <br>
+             <!-- 多选框 -->
+            身份：
+            <input type="radio" name="authority" value="user" id="user-radio" checked><span class="register-user">用户</span>
+            <input type="radio" name="authority" value="manager" id="manager-radio">管理员
+            <br>
+            <!-- 重置按钮 -->
+            <input type="reset" value="清空" id="register-clear">
+            <!-- 注册按钮 -->
+            <input type="submit" value="用户注册" id="register">
+ 
+         </form>
+       </div>
+    </div>
+</body>
+</html>

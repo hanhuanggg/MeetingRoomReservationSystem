@@ -31,6 +31,7 @@ public class LoginServlet extends HttpServlet {
 //
         req.setCharacterEncoding("utf8");
         resp.setCharacterEncoding("utf8");
+        resp.setContentType("text/html;charset=UTF-8");
         String username=req.getParameter("username");
         String password=req.getParameter("password");
         String authority=req.getParameter("authority");
@@ -59,11 +60,24 @@ public class LoginServlet extends HttpServlet {
             return ;
         }
 
+        if(!authority.equals(user.getAuthority())){
+            String html="<h3>登录失败,权限不匹配</h3>";
+            resp.getWriter().write(html);
+            System.out.println(authority);
+            System.out.println(user.getAuthority());
+            System.out.println(user.getUserId());
+            return;
+        }
+
         //用户密码验证成功,创建对话
         HttpSession session=req.getSession(true);
         session.setAttribute("user",user);
+        if(authority.equals("user")){
+            resp.sendRedirect("http://127.0.0.1:8080/MeetingRoomReservationSystem/fronter/html/user.html");
+        }else {
+            resp.sendRedirect("http://127.0.0.1:8080/MeetingRoomReservationSystem/fronter/html/manager.html");
+        }
 
-        resp.sendRedirect("blog_list.html");
 
     }
 
