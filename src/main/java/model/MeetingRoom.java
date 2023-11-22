@@ -4,6 +4,25 @@ public class MeetingRoom {
    private int meetingNumber;
    private int capacity;
    private int area;
+   private String subject;
+   private String states;
+
+   public String getSubject() {
+      return subject;
+   }
+
+   public void setSubject(String subject) {
+      this.subject = subject;
+   }
+
+   public String getStates() {
+      return states;
+   }
+
+   public void setStates(String states) {
+      this.states = states;
+   }
+
 
    public int getMeetingNumber() {
       return meetingNumber;

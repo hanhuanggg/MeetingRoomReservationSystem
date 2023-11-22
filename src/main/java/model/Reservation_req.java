@@ -6,6 +6,8 @@ public class Reservation_req {
     private String room_number;
     private String subject;
 
+    private String states;
+
     private String reqTime;
 
     private String manager_name;
@@ -75,5 +77,13 @@ public class Reservation_req {
 
     public void setReason(String reason) {
         this.reason = reason;
+    }
+
+    public String getStates() {
+        return states;
+    }
+
+    public void setStates(String states) {
+        this.states = states;
     }
 }
