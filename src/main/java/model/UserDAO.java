@@ -10,14 +10,20 @@ public class UserDAO {
     /**
      * 存用户数据
      */
-    public void save_userInfo(String username, String password, String authority) {
+    public void save_userInfo(User user) {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
             connection = DBUtil.getConnection();
-            String sql = "insert into";
+            String sql = "insert into user values(null,?,?,?);";
             statement = connection.prepareStatement(sql);
+
+            statement.setString(1,user.getUsername());
+            statement.setString(2,user.getPassword());
+            statement.setString(3,user.getAuthority());
+
+            statement.executeUpdate();
         }catch(SQLException e){
              e.printStackTrace();
           }finally{
